@@ -9,6 +9,9 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 
+const puppies = require('./routes/puppies');
+app.use('/puppies' , puppies);
+
 app.use(bodyParser.json());
 app.use(cookieParser());
 
@@ -23,3 +26,5 @@ app.listen(port, () => {
     console.log('Listening on port', port);
   }
 });
+
+module.exports = app;
