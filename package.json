@@ -1,0 +1,35 @@
+{
+  "name": "js-integration-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "knex": "knex",
+    "test": "./node_modules/.bin/mocha -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KatieAJenkins/js-integration-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KatieAJenkins/js-integration-testing/issues"
+  },
+  "homepage": "https://github.com/KatieAJenkins/js-integration-testing#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "supertest": "^2.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "knex": "^0.12.6",
+    "morgan": "^1.7.0",
+    "pg": "^6.1.0"
+  }
+}
