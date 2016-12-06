@@ -1,6 +1,6 @@
 'use strict';
 
-process.env.NODE_ENV = 'test';
+process.env.NODE_ENV = 'test'; //connects to test database
 
 const request = require('supertest');
 const expect = require('chai').expect;
@@ -14,6 +14,7 @@ beforeEach((done) => {
     knex.seed.run().then(() => {
       knex('puppies').then(puppies => {
         allPuppies = puppies;
+        console.log(allPuppies);
         done();
       });
     });
@@ -33,7 +34,7 @@ describe('GET /puppies' , () => {
     .get('/puppies')
     .expect('Content-Type' , /json/)
     .end((err,res) => {
-      expect(res.body.length).to.equal(allPuppies.length);
+      expect(res.body.length).to.equal(allPuppies.length)
       done();
     });
   });

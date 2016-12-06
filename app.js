@@ -12,7 +12,11 @@ const morgan = require('morgan');
 const puppies = require('./routes/puppies');
 app.use('/puppies' , puppies);
 
+app.use(bodyParser.urlencoded({extended: false})); //for POST route
+
+//parse application/json
 app.use(bodyParser.json());
+
 app.use(cookieParser());
 
 const path = require('path');
